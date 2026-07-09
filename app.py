@@ -1,9 +1,9 @@
 import math
 import streamlit as st
 
-# --------------------------------------------------
+
 # Task 1: The UI Shell
-# --------------------------------------------------
+
 st.set_page_config(
     page_title="Identity Echo Interface",
     page_icon="🛰️",
@@ -19,39 +19,39 @@ st.write(
 
 st.divider()
 
-# --------------------------------------------------
+
 # Task 2: Multi-Data Collection
-# --------------------------------------------------
+
 user_name = st.text_input("Enter your Name")
 
 user_message = st.text_input("Enter your Message")
 
-# --------------------------------------------------
+
 # Task 3: The Action Gate
-# --------------------------------------------------
+
 if st.button("Transmit"):
 
-    # --------------------------------------------------
+
     # Task 4: Conditional Routing (Edge Cases)
-    # --------------------------------------------------
+   
     if user_name.strip() == "":
         st.error("Please provide your name.")
 
     elif user_message.strip() == "":
         st.warning("Please type a message to transmit.")
 
-    # --------------------------------------------------
+
     # Task 5: The Formatted Output
-    # --------------------------------------------------
+
     else:
         st.success(
             f"Transmission successful! Greetings, {user_name}. "
             f"We received your message: {user_message}"
         )
 
-        # --------------------------------------------------
+    
         # Advanced Challenge: Token Cost Estimator
-        # --------------------------------------------------
+        
         total_characters = len(user_message)
 
         # Approximation: 1 token ≈ 4 characters
